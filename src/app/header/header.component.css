@@ -3,4 +3,9 @@ header{
     color: white;
     width: 100%;
     text-align: center;
+    vertical-align: center;
+}
+
+img{
+    width: 100px;
 }
