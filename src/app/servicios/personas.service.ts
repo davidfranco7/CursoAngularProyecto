@@ -15,8 +15,6 @@ export class PersonasService {
 
 
   getPersonas(): Array<Persona> {
-
-  return this.personas;
-
+    return this.personas;
   }
 }

@@ -1,10 +1,8 @@
 <h1>Listado de personas</h1>
 
-<div class="container">
-    <div class="row">
-        <div *ngFor="let persona of personas">
-            
-        </div>
+    <div *ngFor="let persona of personas">
+         <img src={{persona.avatar}} alt={{persona.id}}>
+        <p>{{persona.email }}</p>
+        <p>{{persona.first_name}}</p>
+        <p>{{persona.last_name}}</p>
     </div>
-</div>
-    
