@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Persona } from '../persona';
+import { PersonasService } from '../servicios/personas.service';
 
 @Component({
   selector: 'app-listado-persona',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoPersonaComponent implements OnInit {
 
-  constructor() { }
+  @Input() personas: Array<Persona> = [];
+
+  constructor(private personasService : PersonasService, private route : ActivatedRoute) {
+    
+    this.personas = personasService.getPersonas();
+   }
 
   ngOnInit(): void {
   }
